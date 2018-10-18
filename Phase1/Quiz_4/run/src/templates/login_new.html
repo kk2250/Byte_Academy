@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Login</title>
+    </head>
+    <body>
+        <div>
+            <p>Please enter new username and password.</p>
+            <form action="/login_new" method="POST">
+                <input name="user_id" placeholder="Username" type="text">
+                <input name="password" placeholder="Password" type="password">
+                <input type="submit" value='sign-up'>
+                <p>{{ message }}</p>
+            </form>
+            <p></p>
+            <a href="http://127.0.0.1:5000/">
+                <input type="submit" value="Back">
+            </a>
+        </div>
+    </body>    
+</html>

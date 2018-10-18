@@ -1,0 +1,10 @@
+{% extends "structure.html" %}
+{% block viewport %}
+    <p>Welcome to Web Trader</p>
+    <form action="/" method="POST">
+        <input name="user_id" placeholder="Username" type="text">
+        <input name="password" placeholder="Password" type="password">
+        <input type="submit">
+        <p>{{ message }}</p>
+    </form>
+{% endblock viewport %}

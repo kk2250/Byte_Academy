@@ -1,0 +1,35 @@
+{% extends 'structure1.html' %}
+
+{% block viewport %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Lookup Quote</h1>
+</div>
+<form action="/lookup_quote" method="POST">
+    <p>Enter Ticker Symbol</p>
+    <input name="ticker_symbol" placeholder="Ticker" type="text" >
+    <input type="submit">
+    <p>{{ message1 }}</p>
+    <p>Enter company name</p>
+    <input name="company_name" placeholder="Company_name" type="text" >
+    <input type="submit">
+    <p>{{ message2 }}</p>
+</form>
+{% endblock viewport %}
+
+
+
+    <!-- <p>Look up company's ticker symbol and price for the company.</p>
+    <p>Enter ticker symbol</p>
+    <form action="/lookup_quote" method="POST">
+        <input name="ticker_symbol" placeholder="Ticker" type="text" >
+        <input type="submit">
+        <p>{{ message1 }}</p>
+    <p>Enter company name</p>
+        <input name="company_name" placeholder="Company_name" type="text" >
+        <input type="submit">
+        <p>{{ message2 }}</p>
+    </form>
+    <p></p>
+    <a href="http://127.0.0.1:5000/web_trader">
+        <input type="submit" value="Back">
+    </a> -->

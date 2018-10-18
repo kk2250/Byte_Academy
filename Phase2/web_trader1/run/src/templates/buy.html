@@ -1,0 +1,35 @@
+{% extends 'structure1.html' %}
+
+{% block viewport %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Buy</h1>
+</div>
+<form action="/buy" method="POST">
+    <p>Enter ticker symbol</p>
+    <input name="ticker_symbol" placeholder="Ticker" type="text">
+        <p>Enter company volume</p>
+        <input name="volume" placeholder="Volume" type="text">
+        <p></p>
+        <p>{{ message }}</p>
+        <p>{{ message1 }}</p>
+        <input type="submit" value="Buy">
+</form>
+{% endblock viewport %}
+
+
+
+    <!-- <p>Buy stock</p>
+    <p>Enter ticker symbol</p>
+    <form action="/buy" method="POST">
+        <input name="ticker_symbol" placeholder="Ticker" type="text">
+        <p>Enter company volume</p>
+        <input name="volume" placeholder="Volume" type="text">
+        <p></p>
+        <p>{{ message }}</p>
+        <p>{{ message1 }}</p>
+        <input type="submit" value="Buy">
+        <p></p>
+    </form>
+    <a href="http://127.0.0.1:5000/web_trader">
+        <input type="submit" value="Back">
+    </a> -->

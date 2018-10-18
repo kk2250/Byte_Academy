@@ -1,0 +1,36 @@
+{% extends 'structure1.html' %}
+
+{% block viewport %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Portfolio</h1>
+</div>
+<p>{{ message }}</p>
+<p>{{ message1 }}</p>
+<div class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Shares</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in port %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock viewport %}
+
+
+    <!-- <p>{{ message }}</p>
+    <p>{{ message1 }}</p>
+    <a href="http://127.0.0.1:5000/web_trader">
+        <input type="submit" value="Back">
+    </a> -->
