@@ -153,15 +153,15 @@ def account():
     elif request.method == 'POST':
         session['friend_id'] = request.form['username']
         Username = session['friend_id']
-        friends = model.find_all_friend(session['friend_id'])
-        list_of_friends = []
-        for __ in friends:
-            list_of_friends.append(__[1])
-        tweets = model.list_tweets(session['friend_id'])
-        list_of_tweets = []
-        for _ in tweets:
-            q = [_[1],_[2],_[3]]
-            list_of_tweets.insert(0, q)
+        # friends = model.find_all_friend(session['friend_id'])
+        # list_of_friends = []
+        # for __ in friends:
+        #     list_of_friends.append(__[1])
+        # tweets = model.list_tweets(session['friend_id'])
+        # list_of_tweets = []
+        # for _ in tweets:
+        #     q = [_[1],_[2],_[3]]
+        #     list_of_tweets.insert(0, q)
         if session['friend_id']:
             if session['friend_id'] == session['user_id']:
                 num_tweet = model.find_num_tweet(session['user_id'])
@@ -177,6 +177,15 @@ def account():
                     list_of_tweets.insert(0, q)
                 return render_template('authorized/me.html', list_of_tweets=list_of_tweets, list_of_friends=list_of_friends, num_tweet=num_tweet, num_friend=num_friend, username=session['user_id'])
             try:
+                friends = model.find_all_friend(session['friend_id'])
+                list_of_friends = []
+                for __ in friends:
+                    list_of_friends.append(__[1])
+                tweets = model.list_tweets(session['friend_id'])
+                list_of_tweets = []
+                for _ in tweets:
+                    q = [_[1],_[2],_[3]]
+                    list_of_tweets.insert(0, q)
                 model.find_fri(session['friend_id'])
                 num_tweet = model.find_num_tweet(session['friend_id'])
                 num_friend = len(model.find_all_friend(session['friend_id']))
