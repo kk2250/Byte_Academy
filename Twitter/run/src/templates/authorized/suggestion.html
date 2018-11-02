@@ -1,0 +1,31 @@
+{% extends 'structure1.html' %}
+
+{% block viewport %}
+
+
+<h3 class='red-text text-center'>{{ message }}</h3>
+      <main role="main" class="container ml-6 col-lg-5">
+        <div class="my-3 p-3 bg-white rounded shadow-sm">
+          <h6 class="border-bottom border-gray pb-2 mb-0">List of Supremer
+          </h6>
+            {% for name,num_tweet,num_friend in suggestions %}
+                <div class="media text-muted pt-3">
+                    <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
+                    <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                        <strong class="d-block text-gray-dark">{{ name }}</strong>
+                        <strong class="d-block text-gray-dark">Supremes</strong>
+                        {{ num_tweet }}
+                        <strong class="d-block text-gray-dark">Friends</strong>
+                        {{ num_friend }}
+                    </p>
+                </div>
+                <form class="form-inline my-0 my-lg-0", method='POST'>
+                    <input name='go' value='{{ name }}' type="hidden">
+                    <button class="btn btn-outline-danger btn-sm" type="submit">Go!</button>
+                </form>
+            {% endfor %}
+        </div>
+      </main>
+    </div>
+
+{% endblock viewport %}

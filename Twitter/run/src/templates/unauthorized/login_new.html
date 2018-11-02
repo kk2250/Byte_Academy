@@ -1,0 +1,22 @@
+{% extends "structure.html" %}
+{% block css_dependencies %}
+<link href="http://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://getbootstrap.com/docs/4.1/examples/sign-in/signin.css" rel="stylesheet">
+{% endblock css_dependencies %}
+{% block viewport %}
+<body class="text-center">
+    <form class="form-signin", method='POST'>
+        <img class="mb-4" src="https://i.pinimg.com/originals/82/9d/15/829d15f2c100855d085e46ebe3d9569a.png" alt="" width="200" height="100">
+        <h1 class="h3 mb-3 font-weight-normal">Enter new username and password.</h1>
+        <p>{{ message }}</p>
+        <input name="user_id" type="text" class="form-control" placeholder="Username">
+        <input name="password" type="password" class="form-control" placeholder="Password">
+        <a href="/login">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+        </a>
+    </form>
+        <a href="/login">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Back</button>
+        </a>
+</body>
+{% endblock viewport %}
