@@ -16,7 +16,9 @@ Phase-2
 Phase-3
 - Pojects
     - Solo Project: Super Resolution Generative Adversarial Network
+       -  https://github.com/kk2250/Project_TextSum
     - Group Project: Text Summarization
+       -  https://github.com/kk2250/Project_SRGAN
     
 End Date: Dec-14th-2018
 
