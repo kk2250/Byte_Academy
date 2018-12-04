@@ -11,10 +11,12 @@ Phase-1
 
 Phase-2
 - Web Development
-
+- Blockchain
 
 Phase-3
-- Poject
-
+- Pojects
+    - Solo Project: Super Resolution Generative Adversarial Network
+    - Group Project: Text Summarization
+    
 End Date: Dec-14th-2018
 
