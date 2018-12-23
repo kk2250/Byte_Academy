@@ -11,6 +11,10 @@ Phase-1
 
 Phase-2
 - Web Development
+    - Flask
+    - HTML
+    - CSS
+    - JS
 - Blockchain
 
 Phase-3
@@ -19,6 +23,8 @@ Phase-3
        -  https://github.com/kk2250/Project_TextSum
     - Group Project: Text Summarization
        -  https://github.com/kk2250/Project_SRGAN
-    
-End Date: Dec-14th-2018
+    - TensorFlow
+    - Keras
+    - Pytorch
+End Date: Dec-19th-2018
 
